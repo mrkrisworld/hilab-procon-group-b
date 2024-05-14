@@ -19,6 +19,24 @@ $ npm run generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
+## Setup GIT
+
+1. If you are using Windows, install [GIT for Windows](https://gitforwindows.org/ "Download GIT for Windows") 
+
+2. Open Console and navigate to your the folder you want your project in
+
+3. GIT clone the repository
+
+```
+$ git clone https://github.com/mrkrisworld/hilab-procon-group-b.git
+```
+
+4. Open folder in VS Code
+
+    ![GIT in VSCode Basics](/assets/README/git-basics-1.png)
+
+You can find a more detailed instruction [here](https://www.w3schools.com/git/git_commit.asp?remote=github)
+
 ## VS Code Development
 
 You can start the server and client (client requires Windows) directly in VS Code using the Debug tab.
