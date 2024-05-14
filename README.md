@@ -19,6 +19,16 @@ $ npm run generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
+## VS Code Development
+
+You can start the server and client (client requires Windows) directly in VS Code using the Debug tab.
+
+- "server: nuxt" starts the local node server in development mode
+
+- "client: edge" starts the browser with the correct port for the development server
+
+- "fullstack: nuxt" starts local server and client
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
