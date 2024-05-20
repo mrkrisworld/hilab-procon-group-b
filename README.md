@@ -35,6 +35,8 @@ $ git clone https://github.com/mrkrisworld/hilab-procon-group-b.git
 
     ![GIT in VSCode Basics](/assets/README/git-basics-1.png)
 
+**Before Commit and Push, always Update (also called Pull, to synchronize with server) before Commiting - this helps avoid complicated merge conflicts.**
+
 You can find a more detailed instruction [here](https://www.w3schools.com/git/git_commit.asp?remote=github)
 
 ## VS Code Development
