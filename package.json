@@ -12,6 +12,11 @@
     "lintfix": "npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.11",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "@fullcalendar/interaction": "^6.1.11",
+    "@fullcalendar/timegrid": "^6.1.11",
+    "@fullcalendar/vue": "^6.1.11",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.25.3",
