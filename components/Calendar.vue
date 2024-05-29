@@ -20,16 +20,30 @@ export default {
         plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin],
         initialView: 'dayGridMonth',
         dateClick: this.handleDateClick,
+        eventClick: this.handleEventClick,
+        // eventContent: this.handleEventContent,
         events: [
-          { title: 'event 1', start: '2024-05-21T10:30:00', end:'2024-05-21T1:30:00' },
-          { title: 'meeting', date: '2024-06-02' }
+          { id: 1,
+            title: 'event 1',
+            description: 'これはevent1の説明欄です。',
+            start: '2024-05-21T10:30:00',
+            end:'2024-05-21T1:30:00',
+            backgroundColor: 'green',
+            editable: true},
+          { id: 2,
+            title: 'event 2',
+            description: 'これはevent2の説明欄です。',
+            start: '2024-06-21T10:30:00',
+            end:'2024-06-21T1:30:00',
+            backgroundColor: 'green',
+            editable: true},
         ]
       }
     }
   },
   methods: {
     handleDateClick(arg) {
-      if (confirm( arg.dateStr + " に追加するスケジュールのタイトルを記入してください。")) {
+      if (confirm( arg.dateStr + "に追加するスケジュールのタイトルを記入してください。")) {
         //schedule title
         
         this.calendarOptions.events.push({
@@ -39,8 +53,12 @@ export default {
           allDay: arg.allDay
         });
       }
+    },
+    handleEventClick(info){
+      if (confirm( info.event.title + "には" + info.event.description )) {
+        //schedule title
+      }
     }
-    //入っている予定をクリックするとタイトルの変更等ができる
   }
 }
 </script>
