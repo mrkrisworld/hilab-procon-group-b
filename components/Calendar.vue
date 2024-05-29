@@ -43,12 +43,13 @@ export default {
   },
   methods: {
     handleDateClick(arg) {
-      if (confirm( arg.dateStr + "に追加するスケジュールのタイトルを記入してください。")) {
+      this.schedule_name = window.prompt('Enter Schdule title.')
+      if (confirm( "Register Schdule title ' " + this.schedule_name + " ' to " + arg.dateStr + ", OK?")) {
         //schedule title
         
         this.calendarOptions.events.push({
           // add new event data
-          title: "新規スケジュール",
+          title: this.schedule_name,
           start: arg.date,
           allDay: arg.allDay
         });
