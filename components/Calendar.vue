@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       schedule_name: "",
+      schedule_description: "",
       calendarOptions: {
         plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin],
         initialView: 'dayGridMonth',
@@ -44,12 +45,14 @@ export default {
   methods: {
     handleDateClick(arg) {
       this.schedule_name = window.prompt('Enter Schdule title.')
+      this.schedule_description = window.prompt('Enter Schdule description.')
       if (confirm( "Register Schdule title ' " + this.schedule_name + " ' to " + arg.dateStr + ", OK?")) {
         //schedule title
         
         this.calendarOptions.events.push({
           // add new event data
           title: this.schedule_name,
+          description: this.schedule_description,
           start: arg.date,
           allDay: arg.allDay
         });
