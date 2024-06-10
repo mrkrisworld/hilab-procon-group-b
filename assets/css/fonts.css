@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Kola";
+    src: local("Kola"),
+        url("../fonts/Kola-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: local("Satoshi"),
+        url("../fonts/Satoshi-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: local("Satoshi"),
+        url("../fonts/Satoshi-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: local("Satoshi"),
+        url("../fonts/Satoshi-Light.woff2") format("woff2");
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: local("Satoshi"),
+        url("../fonts/Satoshi-Italic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+}

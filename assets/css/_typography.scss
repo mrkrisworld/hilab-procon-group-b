@@ -1,0 +1,51 @@
+.typography-editorial {
+    font-family: 'Kola', sans-serif;
+    font-weight: normal;
+    letter-spacing: -.01em;
+    font-size: calc(var(--spacer) * 2.25);
+    line-height: 110%;
+}
+
+.typography-headline {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: bold;
+    letter-spacing: -.01em;
+    font-size: calc(var(--spacer) * 1.5);
+    line-height: 100%;
+}
+
+.typography-copy {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: normal;
+    letter-spacing: .015em;
+    font-size: calc( 15px + calc(var(--spacer) * .25) );
+    line-height: 140%;
+    hyphens: auto;
+}
+
+.typography-description {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: normal;
+    letter-spacing: .02em;
+    font-size: calc( 15px + calc(var(--spacer) * .1) );
+    line-height: 140%;
+    hyphens: auto;
+}
+
+h1 {
+    @extend .typography-headline;
+    font-size: calc(var(--spacer) * 2);
+}
+
+h2 {
+    @extend .typography-headline;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    @extend .typography-copy;
+}

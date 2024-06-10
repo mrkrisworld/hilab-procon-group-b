@@ -1,0 +1,39 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+:root {
+    --spacer: calc(10px + 4vmin);
+    --spacer: clamp(16px, calc(10px + 1.8vw), calc(35px + .8vw));
+
+    --white-10-value: 255, 255, 255;
+    --white-10: rgb(var(--white-10-value));
+
+    --black-00-value: 0, 0, 0;
+    --black-00: rgb(var(--black-00-value));
+
+    --teal-10-value: 231, 246, 245;
+    --teal-10: rgb(var(--teal-10-value));
+
+    --teal-05-value: 6, 160, 152;
+    --teal-05: rgb(var(--teal-05-value));
+
+    --teal-00-value: 3, 101, 96;
+    --teal-00: rgb(var(--teal-00-value));
+
+    --green-05-value: 130, 207, 203;
+    --green-05: rgb(var(--green-05-value));
+
+    --yellow-05-value: 207, 195, 130;
+    --yellow-05: rgb(var(--yellow-05-value));
+
+    --red-05-value: 207, 130, 130;
+    --red-05: rgb(var(--red-05-value));
+
+    --transparency-accent: 0.2;
+
+    --transition-speed: .25s;
+    --transition-easing: cubic-bezier(0.87, 0, 0.13, 1);
+
+    --primary-color: var(--teal-05);
+}

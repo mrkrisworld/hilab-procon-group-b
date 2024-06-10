@@ -1,0 +1,8 @@
+.color-theme-white {
+    --color-text-value: var(--black-10-value);
+    --color-text: rgb(var(--color-text-value));
+    --color-accent-value: var(--primary-color);
+    --color-accent: rgb(var(--color-accent-value));
+    --color-background-value: var(--white-00-value);
+    --color-background: var(--white-00);
+  }
