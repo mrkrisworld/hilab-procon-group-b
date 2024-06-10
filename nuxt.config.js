@@ -71,7 +71,7 @@ export default {
           primary: '#06A098',
           accent: '#E7F6F5',
           secondary: '#036560',
-          info: '##E7F6F5',
+          info: '#E7F6F5',
           warning: '#CFC382',
           error: '#CF8282',
           success: '#82CFCB'
