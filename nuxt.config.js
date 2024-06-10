@@ -56,7 +56,7 @@ export default {
       '~/assets/css/variables.scss'
     ],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -66,6 +66,15 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
+        },
+        light: { //TODO: use colors from variable.scss
+          primary: '#06A098',
+          accent: '#E7F6F5',
+          secondary: '#036560',
+          info: '##E7F6F5',
+          warning: '#CFC382',
+          error: '#CF8282',
+          success: '#82CFCB'
         }
       }
     }

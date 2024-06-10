@@ -46,6 +46,6 @@ a {
     text-decoration: none;
 }
 
-p {
+p, div {
     @extend .typography-copy;
 }
