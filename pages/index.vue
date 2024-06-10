@@ -1,12 +1,11 @@
 <template>
   <div>
     <TheLogo :headerText=headerText />
-    <!--
-    <iframe src="https://calendar.google.com/calendar/embed?src=twtjudy%40gmail.com&ctz=Asia%2FTokyo" 
-    style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    <br>
-    -->
-    <FullCalendar />
+    <div>
+      <h2>The beginning is near!</h2>
+      <p>The new bulletin feature shall be added to <strong>index.vue</strong></p>
+      <p>And do not forget: DO NOT USE H1 headers - start with H2!, use the Logo component for title!</p>
+    </div>
   </div>
 </template>
 
@@ -18,6 +17,11 @@ export default {
   data () {
     return {
       headerText: 'Bulletin'
+    }
+  },
+  head () {
+    return {
+      title: 'Bulletin Board'
     }
   },
   components: {

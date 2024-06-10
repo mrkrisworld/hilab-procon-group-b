@@ -9,8 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - test',
-    title: 'test',
+    titleTemplate: 'hilab | %s',
     htmlAttrs: {
       lang: 'en'
     },

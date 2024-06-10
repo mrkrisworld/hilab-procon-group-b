@@ -11,7 +11,12 @@ import FullCalendar from '@/components/Calendar.vue'
 export default {
   data () {
     return {
-      headerText: 'Calender'
+      headerText: 'Calendar'
+    }
+  },
+  head () {
+    return {
+      title: 'Calendar'
     }
   },
   components: {
