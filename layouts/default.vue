@@ -90,6 +90,7 @@ export default {
       padding-left: calc(var(--spacer)*0);
       padding-right: calc(var(--spacer)*0);
       .hilab-container {
+        min-height: 100%;
         padding-top: calc(var(--spacer)*2);
         padding-bottom: calc(var(--spacer)*2);
         padding-left: calc(var(--spacer));
