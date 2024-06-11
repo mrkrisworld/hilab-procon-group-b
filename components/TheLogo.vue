@@ -1,10 +1,14 @@
 <template>
     <div class="[ hilab-logo-container ]">
-        <img
-            class="[ hilab-logo-img ]"
-            src="~/assets/branding/HILab-logo.png" 
-            alt="Logo of Human Interface Laboratory"
+        <NuxtLink
+            to="/"
         >
+            <img
+                class="[ hilab-logo-img ]"
+                src="~/assets/branding/HILab-logo.png" 
+                alt="Logo of Human Interface Laboratory"
+            >
+        </NuxtLink>
         <h1 class="[ hilab-logo-header ] [ typography-editorial ]">
             {{ headerText }}
         </h1>
