@@ -14,6 +14,7 @@
       <!-- 2024/06/07(金)08:02:13みたいな表示-->
       <p>{{post.date+post.day+' '+post.time}}</p>
       <p>{{post.comment}}</p>
+      <!-- <p>{{post}}</p> -->
     </div>
     <br><br>
 
