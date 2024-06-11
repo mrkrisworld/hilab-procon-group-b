@@ -17,6 +17,8 @@ export default {
     return {
       schedule_name: "",
       schedule_description: "",
+      schdule_starttime: "",
+      schdule_endtime: "",
       calendarOptions: {
         plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin],
         initialView: 'dayGridMonth',
@@ -26,16 +28,20 @@ export default {
         events: [
           { id: 1,
             title: 'event 1',
-            description: 'これはevent1の説明欄です。',
+            extendedProps:{
+              description: 'this is description of event1',
+            },
             start: '2024-05-21T10:30:00',
-            end:'2024-05-21T1:30:00',
+            end: '2024-05-21T13:30:00',
             backgroundColor: 'green',
             editable: true},
           { id: 2,
             title: 'event 2',
-            description: 'これはevent2の説明欄です。',
+            extendedProps:{
+              description: 'this is description of event2',
+            },
             start: '2024-06-21T10:30:00',
-            end:'2024-06-21T1:30:00',
+            end: '2024-06-21T13:30:00',
             backgroundColor: 'green',
             editable: true},
         ]
@@ -44,23 +50,38 @@ export default {
   },
   methods: {
     handleDateClick(arg) {
-      this.schedule_name = window.prompt('Enter Schdule title.')
-      this.schedule_description = window.prompt('Enter Schdule description.')
-      if (confirm( "Register Schdule title ' " + this.schedule_name + " ' to " + arg.dateStr + ", OK?")) {
-        //schedule title
+      if ((this.schedule_name = window.prompt('Enter Schdule title.', 'ゼミ')) != null){
+        // Entered title.
+        if ((this.schedule_description = window.prompt('Enter Schdule description.', 'notifications')) != null){
+          //Entered description
+          if ((this.start = window.prompt('schdule start time ', '13:00')) != null){
+            //'2024-05-21T10:30:00'
+            this.start = arg.dateStr + 'T' + this.start + ':00'
+            if ((this.end = window.prompt('schdule end time ', '17:40')) != null){
+              this.end = arg.dateStr + 'T' + this.end + ':00'
+              if (confirm( "Register Schdule title ' " + this.schedule_name + " ' to " + arg.dateStr + "(" + this.start[11] + this.start[12] +this.start[13] +this.start[14] +this.start[15]+ "~" + this.end[11] + this.end[12] +this.end[13] +this.end[14] +this.end[15] +"), OK?")) {
+                //schedule title
+                this.calendarOptions.events.push({
+                  // add new event data
+                  title: this.schedule_name,
+                  description: this.schedule_description,
+                  start: this.start,
+                  end: this.end,
+                });
+              }
+            }
+          }
+       }
         
-        this.calendarOptions.events.push({
-          // add new event data
-          title: this.schedule_name,
-          description: this.schedule_description,
-          start: arg.date,
-          allDay: arg.allDay
-        });
       }
+      // this.schdule_starttime = window.prompt('Enter Schdule start time.', '0900')
     },
     handleEventClick(info){
-      if (confirm( info.event.title + "には" + info.event.description )) {
-        //schedule title
+      if (confirm( "Event title : " + info.event.title + "\n" +
+          "Event description : " + info.event.extendedProps.description + "\n" +
+          "Event start time : " + info.event.start.getHours() + ":" + info.event.start.getMinutes()  + "\n" +
+          "Event end time : "+ info.event.end.getHours() + ":" + info.event.end.getMinutes() )) {
+        
       }
     }
   }
