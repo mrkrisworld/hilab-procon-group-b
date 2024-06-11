@@ -1,9 +1,6 @@
 
 <template>
-  <div>
   <FullCalendar :options="calendarOptions" />
-  <p>デバッグ:{{calendarOptions.events}}</p>
-  </div>
 </template>
 
 <script>
