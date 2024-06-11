@@ -28,34 +28,7 @@
 </template>
 
 <script>
-import firebase from 'firebase/compat/app'
-import 'firebase/compat/firestore'
-const firebaseConfig = {
-  apiKey: "AIzaSyDat8GLF8HoorMCNfD3XWTmKvwZSGev2Fc",
-  authDomain: "proconbulletinboard.firebaseapp.com",
-  databaseURL: "https://proconbulletinboard-default-rtdb.firebaseio.com",
-  projectId: "proconbulletinboard",
-  storageBucket: "proconbulletinboard.appspot.com",
-  messagingSenderId: "1073896450744",
-  appId: "1:1073896450744:web:417c6b08a05a328c39a24d",
-  measurementId: "G-S92VLC6CXJ"
-};
-
-firebase.initializeApp(firebaseConfig)
-
-const db = firebase.firestore()
-
 export default {
-  // data () {
-  //   return {
-  //     headerText: 'Bulletin'
-  //   }
-  // },
-  // head () {
-  //   return {
-  //     title: 'Bulletin Board'
-  //   }
-  // }
   data() {
     return {
       name: '',
@@ -79,9 +52,9 @@ export default {
       var date = (now.getFullYear()).toString() +'/'+ ('0'+(now.getMonth()+1)).slice(-2) +'/'+ ('0'+now.getDate()).slice(-2);
       var day = '('+days[now.getDay()]+')';
       var time = ('0'+now.getHours()).slice(-2)+':'+('0'+now.getMinutes()).slice(-2)+':'+('0'+now.getSeconds()).slice(-2);
-      var ts = firebase.firestore.Timestamp.fromDate(new Date());
+      var ts = this.$fireModule.firestore.Timestamp.fromDate(new Date());
 
-      db.collection('posts').add({
+      this.$fire.firestore.collection('posts').add({
         name: this.name,
         comment: this.comment,
         date: date,
@@ -98,7 +71,7 @@ export default {
         })
     },
     getPosts() {
-      db.collection('posts').orderBy('timestamp', 'asc').get()
+      this.$fire.firestore.collection('posts').orderBy('timestamp', 'asc').get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           this.posts.push(doc.data());

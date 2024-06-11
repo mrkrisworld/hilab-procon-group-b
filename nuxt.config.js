@@ -43,11 +43,28 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/firebase'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
+
+  firebase: {
+    config: {
+      apiKey: 'AIzaSyDat8GLF8HoorMCNfD3XWTmKvwZSGev2Fc',
+      authDomain: 'proconbulletinboard.firebaseapp.com',
+      databaseURL: 'https://proconbulletinboard-default-rtdb.firebaseio.com',
+      projectId: 'proconbulletinboard',
+      storageBucket: 'proconbulletinboard.appspot.com',
+      messagingSenderId: '1073896450744',
+      appId: '1:1073896450744:web:417c6b08a05a328c39a24d',
+      measurementId: 'G-S92VLC6CXJ'
+    },
+    services: {
+      firestore: true
+    }
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
