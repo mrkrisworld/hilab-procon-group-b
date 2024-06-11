@@ -9,6 +9,24 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
+const firebaseConfig = {
+  apiKey: "AIzaSyDat8GLF8HoorMCNfD3XWTmKvwZSGev2Fc",
+  authDomain: "proconbulletinboard.firebaseapp.com",
+  databaseURL: "https://proconbulletinboard-default-rtdb.firebaseio.com",
+  projectId: "proconbulletinboard",
+  storageBucket: "proconbulletinboard.appspot.com",
+  messagingSenderId: "1073896450744",
+  appId: "1:1073896450744:web:417c6b08a05a328c39a24d",
+  measurementId: "G-S92VLC6CXJ"
+};
+
+firebase.initializeApp(firebaseConfig)
+
+const db = firebase.firestore()
+
+
 export default {
   components: {
     FullCalendar // make the <FullCalendar> tag available
@@ -24,7 +42,7 @@ export default {
         initialView: 'dayGridMonth',
         dateClick: this.handleDateClick,
         eventClick: this.handleEventClick,
-        // eventContent: this.handleEventContent,
+        eventContent: this.handleEventContent,
         events: [
           { id: 1,
             title: 'event 1',
@@ -45,6 +63,7 @@ export default {
             backgroundColor: 'green',
             editable: true},
         ]
+        
       }
     }
   },
@@ -60,7 +79,13 @@ export default {
             if ((this.end = window.prompt('schdule end time ', '17:40')) != null){
               this.end = arg.dateStr + 'T' + this.end + ':00'
               if (confirm( "Register Schdule title ' " + this.schedule_name + " ' to " + arg.dateStr + "(" + this.start[11] + this.start[12] +this.start[13] +this.start[14] +this.start[15]+ "~" + this.end[11] + this.end[12] +this.end[13] +this.end[14] +this.end[15] +"), OK?")) {
-                //schedule title
+                //up to DB schedule
+                db.collection('events').add({
+                  name: this.schedule_name,
+                  description: this.schedule_description,
+                  starttime: this.start,
+                  endtime: this.end
+                })
                 this.calendarOptions.events.push({
                   // add new event data
                   title: this.schedule_name,
