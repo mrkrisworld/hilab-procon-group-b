@@ -1,5 +1,5 @@
 <template>
-  <v-app 
+  <v-app
     dark
     class="[ hilab-app ]"
   >
@@ -54,13 +54,13 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-message-bulleted',
-          title: 'ニュース', //TODO: make multilang
+          icon: 'mdi-bulletin-board',
+          title: '掲示板', // TODO: make multilang
           to: '/'
         },
         {
           icon: 'mdi-calendar-month-outline',
-          title: 'カレンダー', //TODO: make multilang
+          title: 'カレンダー', // TODO: make multilang
           to: '/calendar'
         }
       ],

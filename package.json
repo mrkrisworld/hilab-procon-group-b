@@ -21,6 +21,7 @@
     "@nuxtjs/dayjs": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.25.3",
+    "firebase": "^10.12.2",
     "fullcalendar": "^6.1.11",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
