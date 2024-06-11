@@ -20,10 +20,11 @@ export default {
 } 
 </script>
 
-<style>
+<style lang="scss">
     .hilab-logo-container {
+
         padding-bottom: calc(var(--spacer)*2);
-        
+
         .hilab-logo-header {
             
         }

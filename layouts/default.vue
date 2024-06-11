@@ -55,12 +55,12 @@ export default {
       items: [
         {
           icon: 'mdi-message-bulleted',
-          title: 'Bulletin',
+          title: 'ニュース', //TODO: make multilang
           to: '/'
         },
         {
           icon: 'mdi-calendar-month-outline',
-          title: 'Calendar',
+          title: 'カレンダー', //TODO: make multilang
           to: '/calendar'
         }
       ],

@@ -30,6 +30,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 /* 必要に応じてスタイルを追加 */
 </style>
