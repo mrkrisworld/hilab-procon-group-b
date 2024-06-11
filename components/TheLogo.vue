@@ -23,14 +23,14 @@ export default {
 <style>
     .hilab-logo-container {
         padding-bottom: calc(var(--spacer)*2);
-    }
-
-    .hilab-logo-header {
         
-    }
+        .hilab-logo-header {
+            
+        }
 
-    .hilab-logo-img {
-        height: calc(var(--spacer) * 2.5);
-        width: auto;
+        .hilab-logo-img {
+            height: calc(var(--spacer) * 2.5);
+            width: auto;
+        }
     }
 </style>
