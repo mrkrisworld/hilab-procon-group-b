@@ -3,10 +3,10 @@
         class="[ hilab-new-date ]"
     >
         <ComponentOverlayNavigation
-            :title=title
-            subtitle="some subtitle"
+            :title="title"
+            :subtitle="subtitle"
         />
-
+        
     </div>
 </template>
 
@@ -14,16 +14,17 @@
 import ComponentOverlayNavigation from './ComponentOverlayNavigation.vue';
 
 export default {
-    name: 'NewDate',
+    name: 'Details',
     props: {
-        year: Number,
-        month: Number,
-        day: Number
+        title: String,
+        description: String,
+        startTimeString: Date,
+        endTime: Date
     },
     data () {
         return {
-            title: '新しい予定',
-            subtitle: '',
+            title: '詳細',
+            subtitle: '詳細',
         }
     }
 } 
