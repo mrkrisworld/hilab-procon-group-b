@@ -62,7 +62,14 @@ export default {
           icon: 'mdi-calendar-month-outline',
           title: 'カレンダー', // TODO: make multilang
           to: '/calendar'
+        },
+        /** Comment-in to add DEV Testbed to menu
+        {
+          icon: 'mdi-progress-wrench',
+          title: 'DEV',
+          to: '/testbed'
         }
+        */
       ],
       menuColor: 'secondary',
       miniVariant: false,
